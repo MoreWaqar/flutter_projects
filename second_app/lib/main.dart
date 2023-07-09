@@ -23,9 +23,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(useMaterial3: true),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('DONKEY!'),
+          title: const Text('My First Flutter App'),
         ),
         body: Container(
+          decoration: BoxDecoration(gradient: LinearGradient(
+            colors: [Color.fromRGBO(182, 214, 196, 0.8),Color.fromARGB(204, 151, 223, 182),Color.fromRGBO(102, 216, 151, 0.8),Color.fromRGBO(11, 230, 106, 0.8)],
+            begin: Alignment.topLeft,
+            end : Alignment.bottomRight
+            )),
           width: double.infinity,
           padding: const EdgeInsets.all(12),
           // ignore: prefer_const_constructors
@@ -37,13 +42,14 @@ class MyApp extends StatelessWidget {
                 'Flutter - Waqar',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 28,
+                  color: Color.fromRGBO(235, 14, 14, 0.8),
                   fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(height: 16),
               Text(
-                'Learn Flutter step-by-step, from the POOP UP.',
+                'Learn Flutter step-by-step, from the ground up!',
                 textAlign: TextAlign.center,
               ),
             ],
